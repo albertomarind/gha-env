@@ -10,8 +10,8 @@ jobs:
   test:
     env: #Variables que solo aplican al job
       MONGODB_CLUSTER_ADDRESS: cluster0.oqyimve.mongodb.net
-      MONGODB_USERNAME: albertomarind
-      MONGODB_PASSWORD: 65mBlRGqoD6araBn
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }} #Variables que toma de la seccion secrets en las opciones del repo
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
     environment: testing
     runs-on: ubuntu-latest
